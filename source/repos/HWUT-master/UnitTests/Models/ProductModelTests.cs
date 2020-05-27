@@ -2,6 +2,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HWUT.Models;
 using System;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using System.Drawing.Printing;
 
 namespace UnitTests
 {
@@ -299,7 +301,22 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_AverageRatings_RatingsEqualNull_Should_Pass()
+        public void ProductModel_ToString_SetDate_ElseDefault_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            var SecondResult = new ProductModel();
+            result.Date = new DateTime(2020, 05, 10);
+            SecondResult.Date = new DateTime(2020, 05, 10);
+
+            // Assert
+            Assert.AreEqual(SecondResult.ToString(), result.ToString());
+        }
+
+        [TestMethod]
+        public void ProductModel_AverageRatings_RatingsEqualNull_Should_Equal_0()
         {
             // Arrange
             var result = new ProductModel();
@@ -324,15 +341,29 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_AverageRatings_Default_Should_Equal_5()
+        public void ProductModel_AverageRatings_CountEquals0_Should_Equal_0()
         {
             // Arrange
-
-            // Act
             var result = new ProductModel();
 
+            // Act
+            result.Ratings = new int[] { };
+
             // Assert
-            Assert.AreEqual(5, result.AverageRating());
+            Assert.AreEqual(0, result.AverageRating());
+        }
+
+        [TestMethod]
+        public void ProductModel_AverageRatings_TotalEquals0_Should_Equal_0()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Ratings[0] = 0;
+
+            // Assert
+            Assert.AreEqual(0, result.AverageRating());
         }
 
     }
