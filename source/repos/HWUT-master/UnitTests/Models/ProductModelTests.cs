@@ -35,7 +35,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Date_Default_Should_Pass()
+        public void ProductModel_Set_Date_Should_Equal_5102020()
         {
             // Arrange
             var result = new ProductModel();
@@ -60,16 +60,16 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Email_Default_Should_Pass()
+        public void ProductModel_Set_Email_Should_Equal_Test()
         {
             // Arrange
             var result = new ProductModel();
 
             // Act
-            result.Email = "test@test.com";
+            result.Email = "Test";
 
             // Assert
-            Assert.AreEqual("test@test.com", result.Email);
+            Assert.AreEqual("Test", result.Email);
         }
 
         [TestMethod]
@@ -85,7 +85,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Id_Default_Should_Pass()
+        public void ProductModel_Set_Id_Should_Equal_1()
         {
             // Arrange
             var result = new ProductModel();
@@ -110,7 +110,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Maker_Default_Should_Pass()
+        public void ProductModel_Set_Maker_Should_Equal_Panasonic()
         {
             // Arrange
             var result = new ProductModel();
@@ -135,16 +135,16 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Image_Default_Should_Pass()
+        public void ProductModel_Set_Image_Should_Equal_ImgURL()
         {
             // Arrange
             var result = new ProductModel();
 
             // Act
-            result.Image = "~/img/TV.jpg";
+            result.Image = "ImgURL";
 
             // Assert
-            Assert.AreEqual("~/img/TV.jpg", result.Image);
+            Assert.AreEqual("ImgURL", result.Image);
         }
 
         [TestMethod]
@@ -160,16 +160,16 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Url_Default_Should_Pass()
+        public void ProductModel_Set_Url_Should_Equal_PanasonicWebsite()
         {
             // Arrange
             var result = new ProductModel();
 
             // Act
-            result.Url = "www.panasonic.com";
+            result.Url = "PanasonicWebsite";
 
             // Assert
-            Assert.AreEqual("www.panasonic.com", result.Url);
+            Assert.AreEqual("PanasonicWebsite", result.Url);
         }
 
         [TestMethod]
@@ -185,16 +185,16 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Title_Default_Should_Pass()
+        public void ProductModel_Set_Title_Should_Equal_NewTV()
         {
             // Arrange
             var result = new ProductModel();
 
             // Act
-            result.Title = "New TV";
+            result.Title = "NewTV";
 
             // Assert
-            Assert.AreEqual("New TV", result.Title);
+            Assert.AreEqual("NewTV", result.Title);
         }
 
         [TestMethod]
@@ -210,16 +210,16 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Description_Default_Should_Pass()
+        public void ProductModel_Set_Description_Should_Equal_NewTV()
         {
             // Arrange
             var result = new ProductModel();
 
             // Act
-            result.Description = "This is a new TV";
+            result.Description = "NewTV";
 
             // Assert
-            Assert.AreEqual("This is a new TV", result.Description);
+            Assert.AreEqual("NewTV", result.Description);
         }
 
         [TestMethod]
@@ -235,7 +235,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Sequence_Default_Should_Pass()
+        public void ProductModel_Set_Sequence_Should_Equal_4()
         {
             // Arrange
             var result = new ProductModel();
@@ -260,7 +260,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Logistics_Default_Should_Pass()
+        public void ProductModel_Set_Logistics_Should_Equal_Delivered()
         {
             // Arrange
             var result = new ProductModel();
@@ -288,7 +288,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Ratings_Default_Should_Pass()
+        public void ProductModel_Set_Ratings_Should_Equal_3()
         {
             // Arrange
             var result = new ProductModel();
@@ -301,7 +301,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_ToString_SetDate_ElseDefault_Should_Pass()
+        public void ProductModel_ToString_SetDate_Other_Fields_Default_Should_Pass()
         {
             // Arrange
 
