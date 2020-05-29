@@ -1,9 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HWUT.Models;
 using System;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
-using System.Drawing.Printing;
+using System.Text.Json;
 
 namespace UnitTests
 {
@@ -301,18 +299,16 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_ToString_SetDate_Other_Fields_Default_Should_Pass()
+        public void ProductModel_ToString_Default_Should_Pass()
         {
             // Arrange
+            var result = new ProductModel();
 
             // Act
-            var result = new ProductModel();
-            var SecondResult = new ProductModel();
-            result.Date = new DateTime(2020, 05, 10);
-            SecondResult.Date = new DateTime(2020, 05, 10);
+            string ResultString = JsonSerializer.Serialize<ProductModel>(result);
 
             // Assert
-            Assert.AreEqual(SecondResult.ToString(), result.ToString());
+            Assert.AreEqual(ResultString, result.ToString());
         }
 
         [TestMethod]
